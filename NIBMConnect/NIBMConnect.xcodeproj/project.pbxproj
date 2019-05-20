@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1B8C1C23229166E000A24F10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C22229166E000A24F10 /* AppDelegate.swift */; };
-		1B8C1C25229166E000A24F10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C24229166E000A24F10 /* ViewController.swift */; };
 		1B8C1C28229166E000A24F10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8C1C26229166E000A24F10 /* Main.storyboard */; };
 		1B8C1C2B229166E000A24F10 /* NIBMConnect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C29229166E000A24F10 /* NIBMConnect.xcdatamodeld */; };
 		1B8C1C2D229166E200A24F10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B8C1C2C229166E200A24F10 /* Assets.xcassets */; };
 		1B8C1C30229166E200A24F10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8C1C2E229166E200A24F10 /* LaunchScreen.storyboard */; };
 		1B8C1C3B229166E200A24F10 /* NIBMConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C3A229166E200A24F10 /* NIBMConnectTests.swift */; };
 		1B8C1C46229166E200A24F10 /* NIBMConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C45229166E200A24F10 /* NIBMConnectUITests.swift */; };
+		1BA61ECA2291C0E6002AA524 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61EC92291C0E6002AA524 /* SignIn.storyboard */; };
+		1BA61ECC2291C10B002AA524 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61ECB2291C10B002AA524 /* SignUp.storyboard */; };
+		1BA61ECE2291C11D002AA524 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61ECD2291C11D002AA524 /* Home.storyboard */; };
+		1BA61ED02291C162002AA524 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ECF2291C162002AA524 /* MainViewController.swift */; };
+		1BA61ED22291C198002AA524 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ED12291C198002AA524 /* SignInViewController.swift */; };
+		1BA61ED42291C1AA002AA524 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ED32291C1AA002AA524 /* SignUpViewController.swift */; };
+		1BA61ED62291C1B9002AA524 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ED52291C1B9002AA524 /* HomeViewController.swift */; };
 		1BAA086E2291726900E4F731 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BAA086D2291726900E4F731 /* GoogleService-Info.plist */; };
 		77CFE0263D1FB8A6E4E95548 /* Pods_NIBMConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267002905034B9D68B6F67C6 /* Pods_NIBMConnectUITests.framework */; };
 		7C9750AA5012736D64A3809E /* Pods_NIBMConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68819F38A42E67B5C55D9A1 /* Pods_NIBMConnectTests.framework */; };
@@ -43,7 +49,6 @@
 		123F59954783DCC1E1B70D72 /* Pods-NIBMConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBMConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-NIBMConnectUITests/Pods-NIBMConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1B8C1C1F229166E000A24F10 /* NIBMConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NIBMConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8C1C22229166E000A24F10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1B8C1C24229166E000A24F10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1B8C1C27229166E000A24F10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B8C1C2A229166E000A24F10 /* NIBMConnect.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NIBMConnect.xcdatamodel; sourceTree = "<group>"; };
 		1B8C1C2C229166E200A24F10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,6 +60,13 @@
 		1B8C1C41229166E200A24F10 /* NIBMConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NIBMConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8C1C45229166E200A24F10 /* NIBMConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMConnectUITests.swift; sourceTree = "<group>"; };
 		1B8C1C47229166E200A24F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA61EC92291C0E6002AA524 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
+		1BA61ECB2291C10B002AA524 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		1BA61ECD2291C11D002AA524 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		1BA61ECF2291C162002AA524 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		1BA61ED12291C198002AA524 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		1BA61ED32291C1AA002AA524 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1BA61ED52291C1B9002AA524 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1BAA086D2291726900E4F731 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		267002905034B9D68B6F67C6 /* Pods_NIBMConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBMConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2AAB8006680E9CCC7292FC /* Pods-NIBMConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBMConnectUITests.debug.xcconfig"; path = "Target Support Files/Pods-NIBMConnectUITests/Pods-NIBMConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,11 +171,21 @@
 			path = NIBMConnectUITests;
 			sourceTree = "<group>";
 		};
+		1BA61ED72291CC04002AA524 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		1BAA086F2291737300E4F731 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
 				1B8C1C2E229166E200A24F10 /* LaunchScreen.storyboard */,
 				1B8C1C26229166E000A24F10 /* Main.storyboard */,
+				1BA61EC92291C0E6002AA524 /* SignIn.storyboard */,
+				1BA61ECB2291C10B002AA524 /* SignUp.storyboard */,
+				1BA61ECD2291C11D002AA524 /* Home.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -171,7 +193,10 @@
 		1BAA08702291738900E4F731 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1B8C1C24229166E000A24F10 /* ViewController.swift */,
+				1BA61ECF2291C162002AA524 /* MainViewController.swift */,
+				1BA61ED12291C198002AA524 /* SignInViewController.swift */,
+				1BA61ED32291C1AA002AA524 /* SignUpViewController.swift */,
+				1BA61ED52291C1B9002AA524 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +211,7 @@
 		1BAA0872229173A700E4F731 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1BA61ED72291CC04002AA524 /* Extensions */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -312,7 +338,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA61ECE2291C11D002AA524 /* Home.storyboard in Resources */,
 				1B8C1C30229166E200A24F10 /* LaunchScreen.storyboard in Resources */,
+				1BA61ECA2291C0E6002AA524 /* SignIn.storyboard in Resources */,
+				1BA61ECC2291C10B002AA524 /* SignUp.storyboard in Resources */,
 				1BAA086E2291726900E4F731 /* GoogleService-Info.plist in Resources */,
 				1B8C1C2D229166E200A24F10 /* Assets.xcassets in Resources */,
 				1B8C1C28229166E000A24F10 /* Main.storyboard in Resources */,
@@ -441,9 +470,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA61ED22291C198002AA524 /* SignInViewController.swift in Sources */,
 				1B8C1C2B229166E000A24F10 /* NIBMConnect.xcdatamodeld in Sources */,
-				1B8C1C25229166E000A24F10 /* ViewController.swift in Sources */,
 				1B8C1C23229166E000A24F10 /* AppDelegate.swift in Sources */,
+				1BA61ED02291C162002AA524 /* MainViewController.swift in Sources */,
+				1BA61ED42291C1AA002AA524 /* SignUpViewController.swift in Sources */,
+				1BA61ED62291C1B9002AA524 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
