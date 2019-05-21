@@ -1,15 +1,14 @@
 //
-//  HomeViewController.swift
+//  CheckIdentityViewController.swift
 //  NIBMConnect
 //
-//  Created by malith on 5/19/19.
+//  Created by malith on 5/20/19.
 //  Copyright © 2019 malith. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
-class HomeViewController: UIViewController {
+class CheckIdentityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +21,17 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func logout(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-        }
-        catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
-        
-        self.performSegue(withIdentifier: "homeToSignIn", sender: nil)
+    //nav bar styles
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let nav = self.navigationController?.navigationBar
+        nav?.barStyle = UIBarStyle.black
+        nav?.tintColor = UIColor.white
+        nav?.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.green]
+    }
+    
+    @IBAction func check(_ sender: Any) {
+        self.performSegue(withIdentifier: "checkIdentityToMyProfile", sender: nil)
     }
     
     /*

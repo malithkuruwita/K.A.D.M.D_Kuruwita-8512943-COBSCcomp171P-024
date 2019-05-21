@@ -98,16 +98,32 @@ class SignUpViewController: UIViewController {
     
     //signup function
     @IBAction func signUp(_ sender: Any) {
-        guard (self.email.text) != nil else{  return }
-        guard (self.password.text) != nil else { return }
-        guard (self.confirmPassword.text) != nil else { return }
+        //validations
         /*guard (self.name.text) != nil else { return }
         guard (self.age.text) != nil else { return }
         guard (self.phoneNumber.text) != nil else { return }
         guard (self.birthdate.text) != nil else { return }*/
-        guard (self.password.text) == (self.confirmPassword.text) else { return }
         guard let image = imageView.image else { return }
         
+        if email.text?.isEmpty ?? true || password.text?.isEmpty ?? true || confirmPassword.text?.isEmpty ?? true{
+            let alertController = UIAlertController(title: "Error", message: "email, password, confirm password is required", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        if (self.password.text) != (self.confirmPassword.text) {
+            let alertController = UIAlertController(title: "Error", message: "password and confirm password must match", preferredStyle: .alert)
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+        
+        //show spinner
+        self.showSpinner(onView: self.view)
+        
+        //firebase email signup function
         Auth.auth().createUser(withEmail: self.email.text!, password: self.password.text!) { user, error in
             if error == nil && user != nil {
                 print("user created!")
@@ -117,15 +133,36 @@ class SignUpViewController: UIViewController {
                         self.saveProfile(profileImageURL: url!){ success in
                             if success{
                                 //everything is succeded
-                                print("coooooooooooooool")
+                                //remove spinner
+                                self.removeSpinner()
+                                
+                                //go to home window
+                                self.performSegue(withIdentifier: "signUpToHome", sender: nil)
+                                
                             }
                         }
                     }else{
                         //error unable to upload profile image
+                        //remove spinner
+                        self.removeSpinner()
+                        
+                        //show alert
+                        let alertController = UIAlertController(title: "Error", message: "Unable to upload profile image", preferredStyle: .alert)
+                        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                        alertController.addAction(defaultAction)
+                        self.present(alertController, animated: true, completion: nil)
                     }
                 }
             }else{
                 print("Error: \(error!.localizedDescription)")
+                //remove spinner
+                self.removeSpinner()
+                
+                //show alert
+                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alertController.addAction(defaultAction)
+                self.present(alertController, animated: true, completion: nil)
             }
         }
         

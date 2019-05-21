@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B838D9322934673006C15D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B838D9222934673006C15D9 /* GoogleService-Info.plist */; };
 		1B8C1C23229166E000A24F10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C22229166E000A24F10 /* AppDelegate.swift */; };
 		1B8C1C28229166E000A24F10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8C1C26229166E000A24F10 /* Main.storyboard */; };
 		1B8C1C2B229166E000A24F10 /* NIBMConnect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C29229166E000A24F10 /* NIBMConnect.xcdatamodeld */; };
@@ -14,14 +15,18 @@
 		1B8C1C30229166E200A24F10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8C1C2E229166E200A24F10 /* LaunchScreen.storyboard */; };
 		1B8C1C3B229166E200A24F10 /* NIBMConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C3A229166E200A24F10 /* NIBMConnectTests.swift */; };
 		1B8C1C46229166E200A24F10 /* NIBMConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C45229166E200A24F10 /* NIBMConnectUITests.swift */; };
+		1BA2A20D229366C80087F65F /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2A20C229366C80087F65F /* MyProfileViewController.swift */; };
+		1BA2A20F229376A60087F65F /* CheckIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2A20E229376A60087F65F /* CheckIdentityViewController.swift */; };
+		1BA2A2112293790B0087F65F /* NIBMStudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2A2102293790B0087F65F /* NIBMStudentsViewController.swift */; };
 		1BA61ECA2291C0E6002AA524 /* SignIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61EC92291C0E6002AA524 /* SignIn.storyboard */; };
 		1BA61ECC2291C10B002AA524 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61ECB2291C10B002AA524 /* SignUp.storyboard */; };
 		1BA61ECE2291C11D002AA524 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA61ECD2291C11D002AA524 /* Home.storyboard */; };
 		1BA61ED02291C162002AA524 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ECF2291C162002AA524 /* MainViewController.swift */; };
 		1BA61ED22291C198002AA524 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ED12291C198002AA524 /* SignInViewController.swift */; };
 		1BA61ED42291C1AA002AA524 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ED32291C1AA002AA524 /* SignUpViewController.swift */; };
-		1BA61ED62291C1B9002AA524 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ED52291C1B9002AA524 /* HomeViewController.swift */; };
-		1BAA086E2291726900E4F731 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BAA086D2291726900E4F731 /* GoogleService-Info.plist */; };
+		1BCD8F9B2292A37300199026 /* LoadingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD8F9A2292A37300199026 /* LoadingExtension.swift */; };
+		1BCD8F9D2292A3A700199026 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD8F9C2292A3A700199026 /* AlertExtension.swift */; };
+		1BCD8F9F2292C74E00199026 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD8F9E2292C74E00199026 /* ResetPasswordViewController.swift */; };
 		77CFE0263D1FB8A6E4E95548 /* Pods_NIBMConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267002905034B9D68B6F67C6 /* Pods_NIBMConnectUITests.framework */; };
 		7C9750AA5012736D64A3809E /* Pods_NIBMConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68819F38A42E67B5C55D9A1 /* Pods_NIBMConnectTests.framework */; };
 		BEDA400A08CF4DBFFA70F1AF /* Pods_NIBMConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A085DDD31B0D53F9735E0A7 /* Pods_NIBMConnect.framework */; };
@@ -47,6 +52,7 @@
 /* Begin PBXFileReference section */
 		0F9A794C091F1983509FC095 /* Pods-NIBMConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBMConnectTests.debug.xcconfig"; path = "Target Support Files/Pods-NIBMConnectTests/Pods-NIBMConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		123F59954783DCC1E1B70D72 /* Pods-NIBMConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBMConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-NIBMConnectUITests/Pods-NIBMConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1B838D9222934673006C15D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1B8C1C1F229166E000A24F10 /* NIBMConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NIBMConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8C1C22229166E000A24F10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B8C1C27229166E000A24F10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,14 +66,19 @@
 		1B8C1C41229166E200A24F10 /* NIBMConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NIBMConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8C1C45229166E200A24F10 /* NIBMConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMConnectUITests.swift; sourceTree = "<group>"; };
 		1B8C1C47229166E200A24F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BA2A20C229366C80087F65F /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		1BA2A20E229376A60087F65F /* CheckIdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIdentityViewController.swift; sourceTree = "<group>"; };
+		1BA2A2102293790B0087F65F /* NIBMStudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMStudentsViewController.swift; sourceTree = "<group>"; };
 		1BA61EC92291C0E6002AA524 /* SignIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignIn.storyboard; sourceTree = "<group>"; };
 		1BA61ECB2291C10B002AA524 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		1BA61ECD2291C11D002AA524 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		1BA61ECF2291C162002AA524 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1BA61ED12291C198002AA524 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1BA61ED32291C1AA002AA524 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		1BA61ED52291C1B9002AA524 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		1BAA086D2291726900E4F731 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1BCD8F9A2292A37300199026 /* LoadingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingExtension.swift; sourceTree = "<group>"; };
+		1BCD8F9C2292A3A700199026 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
+		1BCD8F9E2292C74E00199026 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		1BCD8FA02292E29300199026 /* NIBMConnect.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NIBMConnect.entitlements; sourceTree = "<group>"; };
 		267002905034B9D68B6F67C6 /* Pods_NIBMConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBMConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2AAB8006680E9CCC7292FC /* Pods-NIBMConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NIBMConnectUITests.debug.xcconfig"; path = "Target Support Files/Pods-NIBMConnectUITests/Pods-NIBMConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7A085DDD31B0D53F9735E0A7 /* Pods_NIBMConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NIBMConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +151,7 @@
 		1B8C1C21229166E000A24F10 /* NIBMConnect */ = {
 			isa = PBXGroup;
 			children = (
+				1BCD8FA02292E29300199026 /* NIBMConnect.entitlements */,
 				1BAA0872229173A700E4F731 /* Shared */,
 				1BAA08712291739900E4F731 /* Models */,
 				1BAA08702291738900E4F731 /* Controllers */,
@@ -147,7 +159,7 @@
 				1B8C1C22229166E000A24F10 /* AppDelegate.swift */,
 				1B8C1C2C229166E200A24F10 /* Assets.xcassets */,
 				1B8C1C31229166E200A24F10 /* Info.plist */,
-				1BAA086D2291726900E4F731 /* GoogleService-Info.plist */,
+				1B838D9222934673006C15D9 /* GoogleService-Info.plist */,
 				1B8C1C29229166E000A24F10 /* NIBMConnect.xcdatamodeld */,
 			);
 			path = NIBMConnect;
@@ -174,6 +186,8 @@
 		1BA61ED72291CC04002AA524 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1BCD8F9A2292A37300199026 /* LoadingExtension.swift */,
+				1BCD8F9C2292A3A700199026 /* AlertExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -196,7 +210,10 @@
 				1BA61ECF2291C162002AA524 /* MainViewController.swift */,
 				1BA61ED12291C198002AA524 /* SignInViewController.swift */,
 				1BA61ED32291C1AA002AA524 /* SignUpViewController.swift */,
-				1BA61ED52291C1B9002AA524 /* HomeViewController.swift */,
+				1BCD8F9E2292C74E00199026 /* ResetPasswordViewController.swift */,
+				1BA2A20C229366C80087F65F /* MyProfileViewController.swift */,
+				1BA2A20E229376A60087F65F /* CheckIdentityViewController.swift */,
+				1BA2A2102293790B0087F65F /* NIBMStudentsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -302,6 +319,11 @@
 				TargetAttributes = {
 					1B8C1C1E229166E000A24F10 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 0;
+							};
+						};
 					};
 					1B8C1C35229166E200A24F10 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -342,9 +364,9 @@
 				1B8C1C30229166E200A24F10 /* LaunchScreen.storyboard in Resources */,
 				1BA61ECA2291C0E6002AA524 /* SignIn.storyboard in Resources */,
 				1BA61ECC2291C10B002AA524 /* SignUp.storyboard in Resources */,
-				1BAA086E2291726900E4F731 /* GoogleService-Info.plist in Resources */,
 				1B8C1C2D229166E200A24F10 /* Assets.xcassets in Resources */,
 				1B8C1C28229166E000A24F10 /* Main.storyboard in Resources */,
+				1B838D9322934673006C15D9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,12 +492,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BA2A20D229366C80087F65F /* MyProfileViewController.swift in Sources */,
+				1BCD8F9F2292C74E00199026 /* ResetPasswordViewController.swift in Sources */,
 				1BA61ED22291C198002AA524 /* SignInViewController.swift in Sources */,
 				1B8C1C2B229166E000A24F10 /* NIBMConnect.xcdatamodeld in Sources */,
 				1B8C1C23229166E000A24F10 /* AppDelegate.swift in Sources */,
+				1BCD8F9B2292A37300199026 /* LoadingExtension.swift in Sources */,
+				1BA2A20F229376A60087F65F /* CheckIdentityViewController.swift in Sources */,
+				1BCD8F9D2292A3A700199026 /* AlertExtension.swift in Sources */,
 				1BA61ED02291C162002AA524 /* MainViewController.swift in Sources */,
+				1BA2A2112293790B0087F65F /* NIBMStudentsViewController.swift in Sources */,
 				1BA61ED42291C1AA002AA524 /* SignUpViewController.swift in Sources */,
-				1BA61ED62291C1B9002AA524 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,6 +677,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SF72YH8H4;
 				INFOPLIST_FILE = NIBMConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -668,6 +696,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7SF72YH8H4;
 				INFOPLIST_FILE = NIBMConnect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

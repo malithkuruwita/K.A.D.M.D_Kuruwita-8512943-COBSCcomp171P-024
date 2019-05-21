@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1067590474408-a51sqkagrvq2a5ehf2ec79n7qboq3fel.apps.googleusercontent.com</string>
+	<string>39093620497-530vtc5m0ff4dk37jlnvbp3g9emhjnpa.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1067590474408-a51sqkagrvq2a5ehf2ec79n7qboq3fel</string>
+	<string>com.googleusercontent.apps.39093620497-530vtc5m0ff4dk37jlnvbp3g9emhjnpa</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCbobIdunbkycX4bofWcAZ8zkzmkPJE-Hs</string>
+	<string>AIzaSyBjXoldDEdjtlvE9XinSvjeyEsYOOykFVI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1067590474408</string>
+	<string>39093620497</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.malith.NIBMConnect</string>
 	<key>PROJECT_ID</key>
-	<string>nibmconnect-9d88a</string>
+	<string>movieslk-bd962</string>
 	<key>STORAGE_BUCKET</key>
-	<string>nibmconnect-9d88a.appspot.com</string>
+	<string>movieslk-bd962.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1067590474408:ios:5924db9fd15e477f</string>
+	<string>1:39093620497:ios:5924db9fd15e477f</string>
 	<key>DATABASE_URL</key>
-	<string>https://nibmconnect-9d88a.firebaseio.com</string>
+	<string>https://movieslk-bd962.firebaseio.com</string>
 </dict>
 </plist>
