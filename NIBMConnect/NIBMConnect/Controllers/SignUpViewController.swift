@@ -201,7 +201,11 @@ class SignUpViewController: UIViewController {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         let databaseRef = Database.database().reference().child("user/profile/\(uid)")
         let userObject = [
-            "photoURL": profileImageURL.absoluteString
+            "photoURL": profileImageURL.absoluteString,
+            "name": self.name.text as Any,
+            "age": self.age.text as Any,
+            "birthdate": self.birthdate.text as Any,
+            "phoneNumber": self.phoneNumber.text as Any
             ] as [String:Any]
         databaseRef.setValue(userObject){ error, ref in
             completion(error == nil)

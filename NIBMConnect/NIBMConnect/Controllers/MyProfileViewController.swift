@@ -10,11 +10,53 @@ import UIKit
 import Firebase
 
 class MyProfileViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var profilePicture: UIImageView!
+    @IBOutlet weak var age: UILabel!
+    @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var birthdate: UILabel!
+    @IBOutlet weak var phoneNumber: UILabel!
+    
+    var myProfile = [MyProfile]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        //make image view rounded
+        profilePicture.layer.cornerRadius = profilePicture.frame.size.width / 2
+        profilePicture.clipsToBounds = true
+        profilePicture.layer.borderWidth = 3
+        profilePicture.layer.borderColor = UIColor.white.cgColor
+        //load myprofile data
+        var dbRef : DatabaseReference!
+        dbRef = Database.database().reference()
+        //show spinner
+        self.showSpinner(onView: self.view)
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        dbRef.child("user/profile/\(uid)").observeSingleEvent(of: .value) {
+            (snapshot) in
+            if !snapshot.exists(){return}
+            print(snapshot.value as Any)
+            let myPro = MyProfile(snap: snapshot)
+            self.myProfile.append(myPro)
+            let myprofile = self.myProfile[0]
+            //add data to labels
+                self.name.text = myprofile.name
+                self.age.text = myprofile.age
+                self.birthdate.text = myprofile.birthdate
+                self.phoneNumber.text = myprofile.phoneNumber
+            //load image and cache it
+            imageService.getImage(withURL: myprofile.photoURL){
+                image in
+                    self.profilePicture.image = image
+                //hide spinner
+                self.removeSpinner()
+            }
+            
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

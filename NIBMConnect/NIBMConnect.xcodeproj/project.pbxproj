@@ -24,6 +24,8 @@
 		1BA61ED02291C162002AA524 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ECF2291C162002AA524 /* MainViewController.swift */; };
 		1BA61ED22291C198002AA524 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ED12291C198002AA524 /* SignInViewController.swift */; };
 		1BA61ED42291C1AA002AA524 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ED32291C1AA002AA524 /* SignUpViewController.swift */; };
+		1BBFA8BF2294025100F9063D /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBFA8BE2294025100F9063D /* MyProfile.swift */; };
+		1BBFA8C2229404AF00F9063D /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBFA8C1229404AF00F9063D /* ImageService.swift */; };
 		1BCD8F9B2292A37300199026 /* LoadingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD8F9A2292A37300199026 /* LoadingExtension.swift */; };
 		1BCD8F9D2292A3A700199026 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD8F9C2292A3A700199026 /* AlertExtension.swift */; };
 		1BCD8F9F2292C74E00199026 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD8F9E2292C74E00199026 /* ResetPasswordViewController.swift */; };
@@ -75,6 +77,8 @@
 		1BA61ECF2291C162002AA524 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1BA61ED12291C198002AA524 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		1BA61ED32291C1AA002AA524 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		1BBFA8BE2294025100F9063D /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
+		1BBFA8C1229404AF00F9063D /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		1BCD8F9A2292A37300199026 /* LoadingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingExtension.swift; sourceTree = "<group>"; };
 		1BCD8F9C2292A3A700199026 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		1BCD8F9E2292C74E00199026 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 		1BAA08712291739900E4F731 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1BBFA8BE2294025100F9063D /* MyProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -228,9 +233,18 @@
 		1BAA0872229173A700E4F731 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1BBFA8C02294044B00F9063D /* Services */,
 				1BA61ED72291CC04002AA524 /* Extensions */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		1BBFA8C02294044B00F9063D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1BBFA8C1229404AF00F9063D /* ImageService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		AEEE818D66540AF23AD033E9 /* Pods */ = {
@@ -493,12 +507,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BA2A20D229366C80087F65F /* MyProfileViewController.swift in Sources */,
+				1BBFA8BF2294025100F9063D /* MyProfile.swift in Sources */,
 				1BCD8F9F2292C74E00199026 /* ResetPasswordViewController.swift in Sources */,
 				1BA61ED22291C198002AA524 /* SignInViewController.swift in Sources */,
 				1B8C1C2B229166E000A24F10 /* NIBMConnect.xcdatamodeld in Sources */,
 				1B8C1C23229166E000A24F10 /* AppDelegate.swift in Sources */,
 				1BCD8F9B2292A37300199026 /* LoadingExtension.swift in Sources */,
 				1BA2A20F229376A60087F65F /* CheckIdentityViewController.swift in Sources */,
+				1BBFA8C2229404AF00F9063D /* ImageService.swift in Sources */,
 				1BCD8F9D2292A3A700199026 /* AlertExtension.swift in Sources */,
 				1BA61ED02291C162002AA524 /* MainViewController.swift in Sources */,
 				1BA2A2112293790B0087F65F /* NIBMStudentsViewController.swift in Sources */,
