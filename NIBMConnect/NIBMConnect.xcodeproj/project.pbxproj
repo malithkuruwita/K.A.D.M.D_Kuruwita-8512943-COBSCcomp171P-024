@@ -26,6 +26,10 @@
 		1BA61ED42291C1AA002AA524 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA61ED32291C1AA002AA524 /* SignUpViewController.swift */; };
 		1BBFA8BF2294025100F9063D /* MyProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBFA8BE2294025100F9063D /* MyProfile.swift */; };
 		1BBFA8C2229404AF00F9063D /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBFA8C1229404AF00F9063D /* ImageService.swift */; };
+		1BC96718229485730020C1F6 /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC96716229485730020C1F6 /* StudentTableViewCell.swift */; };
+		1BC96719229485730020C1F6 /* StudentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1BC96717229485730020C1F6 /* StudentTableViewCell.xib */; };
+		1BC9671B229495ED0020C1F6 /* NibmStudents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9671A229495ED0020C1F6 /* NibmStudents.swift */; };
+		1BC9671D2294AC140020C1F6 /* NIBMStudentsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC9671C2294AC140020C1F6 /* NIBMStudentsDetailsViewController.swift */; };
 		1BCD8F9B2292A37300199026 /* LoadingExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD8F9A2292A37300199026 /* LoadingExtension.swift */; };
 		1BCD8F9D2292A3A700199026 /* AlertExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD8F9C2292A3A700199026 /* AlertExtension.swift */; };
 		1BCD8F9F2292C74E00199026 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCD8F9E2292C74E00199026 /* ResetPasswordViewController.swift */; };
@@ -79,6 +83,10 @@
 		1BA61ED32291C1AA002AA524 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1BBFA8BE2294025100F9063D /* MyProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfile.swift; sourceTree = "<group>"; };
 		1BBFA8C1229404AF00F9063D /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		1BC96716229485730020C1F6 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
+		1BC96717229485730020C1F6 /* StudentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentTableViewCell.xib; sourceTree = "<group>"; };
+		1BC9671A229495ED0020C1F6 /* NibmStudents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibmStudents.swift; sourceTree = "<group>"; };
+		1BC9671C2294AC140020C1F6 /* NIBMStudentsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMStudentsDetailsViewController.swift; sourceTree = "<group>"; };
 		1BCD8F9A2292A37300199026 /* LoadingExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingExtension.swift; sourceTree = "<group>"; };
 		1BCD8F9C2292A3A700199026 /* AlertExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtension.swift; sourceTree = "<group>"; };
 		1BCD8F9E2292C74E00199026 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
@@ -218,6 +226,7 @@
 				1BA2A20C229366C80087F65F /* MyProfileViewController.swift */,
 				1BA2A20E229376A60087F65F /* CheckIdentityViewController.swift */,
 				1BA2A2102293790B0087F65F /* NIBMStudentsViewController.swift */,
+				1BC9671C2294AC140020C1F6 /* NIBMStudentsDetailsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				1BBFA8BE2294025100F9063D /* MyProfile.swift */,
+				1BC9671A229495ED0020C1F6 /* NibmStudents.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,6 +243,7 @@
 		1BAA0872229173A700E4F731 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1BC96715229484F30020C1F6 /* TableViewCells */,
 				1BBFA8C02294044B00F9063D /* Services */,
 				1BA61ED72291CC04002AA524 /* Extensions */,
 			);
@@ -245,6 +256,15 @@
 				1BBFA8C1229404AF00F9063D /* ImageService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1BC96715229484F30020C1F6 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				1BC96716229485730020C1F6 /* StudentTableViewCell.swift */,
+				1BC96717229485730020C1F6 /* StudentTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		AEEE818D66540AF23AD033E9 /* Pods */ = {
@@ -377,6 +397,7 @@
 				1BA61ECE2291C11D002AA524 /* Home.storyboard in Resources */,
 				1B8C1C30229166E200A24F10 /* LaunchScreen.storyboard in Resources */,
 				1BA61ECA2291C0E6002AA524 /* SignIn.storyboard in Resources */,
+				1BC96719229485730020C1F6 /* StudentTableViewCell.xib in Resources */,
 				1BA61ECC2291C10B002AA524 /* SignUp.storyboard in Resources */,
 				1B8C1C2D229166E200A24F10 /* Assets.xcassets in Resources */,
 				1B8C1C28229166E000A24F10 /* Main.storyboard in Resources */,
@@ -513,10 +534,13 @@
 				1B8C1C2B229166E000A24F10 /* NIBMConnect.xcdatamodeld in Sources */,
 				1B8C1C23229166E000A24F10 /* AppDelegate.swift in Sources */,
 				1BCD8F9B2292A37300199026 /* LoadingExtension.swift in Sources */,
+				1BC9671D2294AC140020C1F6 /* NIBMStudentsDetailsViewController.swift in Sources */,
 				1BA2A20F229376A60087F65F /* CheckIdentityViewController.swift in Sources */,
+				1BC9671B229495ED0020C1F6 /* NibmStudents.swift in Sources */,
 				1BBFA8C2229404AF00F9063D /* ImageService.swift in Sources */,
 				1BCD8F9D2292A3A700199026 /* AlertExtension.swift in Sources */,
 				1BA61ED02291C162002AA524 /* MainViewController.swift in Sources */,
+				1BC96718229485730020C1F6 /* StudentTableViewCell.swift in Sources */,
 				1BA2A2112293790B0087F65F /* NIBMStudentsViewController.swift in Sources */,
 				1BA61ED42291C1AA002AA524 /* SignUpViewController.swift in Sources */,
 			);
