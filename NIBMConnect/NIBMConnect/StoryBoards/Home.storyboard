@@ -10,39 +10,151 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My Notes-->
+        <!--Homeworks-->
         <scene sceneID="ii5-Kf-vla">
             <objects>
-                <viewController id="hMA-oa-QxQ" sceneMemberID="viewController">
+                <viewController id="hMA-oa-QxQ" customClass="HomeworkViewController" customModule="NIBMConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IpS-GL-dRZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FQS-7u-wOR">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.67971181879999998" green="1" blue="0.14265921979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67971181879999998" green="1" blue="0.14265921979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="FQS-7u-wOR" secondAttribute="trailing" id="4ub-TN-Y1Y"/>
+                            <constraint firstItem="FQS-7u-wOR" firstAttribute="leading" secondItem="IpS-GL-dRZ" secondAttribute="leading" id="Box-5z-GH7"/>
+                            <constraint firstItem="FQS-7u-wOR" firstAttribute="top" secondItem="Pyf-59-ynB" secondAttribute="top" id="NwD-Bb-j3x"/>
+                            <constraint firstItem="FQS-7u-wOR" firstAttribute="bottom" secondItem="Pyf-59-ynB" secondAttribute="bottom" id="kGT-QU-etE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Pyf-59-ynB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="My Notes" id="igm-fb-tU3"/>
+                    <navigationItem key="navigationItem" title="Homeworks" id="igm-fb-tU3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xIR-rb-KNs">
+                            <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="pxq-ew-0Zl" kind="show" identifier="homeworkToHomeworkAdd" id="x84-Bq-8B3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="Xbh-Mx-ekt" kind="show" id="faa-KC-3f8"/>
+                        <outlet property="homeworkTable" destination="FQS-7u-wOR" id="gSg-kP-rEa"/>
+                        <segue destination="Xbh-Mx-ekt" kind="show" identifier="homeworkToHomeworkDetails" id="faa-KC-3f8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zuz-cv-q9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1479" y="-94"/>
+            <point key="canvasLocation" x="-1554" y="-94"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Homeworks-->
+        <scene sceneID="gxI-FR-0D9">
+            <objects>
+                <viewController id="pxq-ew-0Zl" customClass="HomeworkAddViewController" customModule="NIBMConnect" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="teE-sD-sXj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AP5-t0-sd8">
+                                <rect key="frame" x="45" y="121" width="285" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="27k-fK-cLI">
+                                <rect key="frame" x="45" y="206" width="285" height="321"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sy8-Wa-WcE">
+                                <rect key="frame" x="143" y="177" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtB-Wx-0cC">
+                                <rect key="frame" x="169" y="555" width="37" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addHomework:" destination="pxq-ew-0Zl" eventType="touchUpInside" id="NZp-xQ-xKu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67971181879999998" green="1" blue="0.14265921979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="u1D-Wn-7zv"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Homeworks" id="wOJ-ij-tUB"/>
+                    <connections>
+                        <outlet property="homeworkDescription" destination="27k-fK-cLI" id="A9q-pI-lIT"/>
+                        <outlet property="homeworkTitle" destination="AP5-t0-sd8" id="MHm-jJ-umi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kkl-T8-aMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-746" y="-94"/>
+        </scene>
+        <!--Homework-->
         <scene sceneID="xrH-ks-VPp">
             <objects>
-                <viewController id="Xbh-Mx-ekt" sceneMemberID="viewController">
+                <viewController id="Xbh-Mx-ekt" customClass="HomeworkDetailsViewController" customModule="NIBMConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k5j-N2-mx5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tittle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scj-sq-dSu">
+                                <rect key="frame" x="38" y="114" width="298" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l5t-LW-joI">
+                                <rect key="frame" x="38" y="180" width="298" height="317"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="317" id="Xpm-5u-T8M"/>
+                                    <constraint firstAttribute="width" constant="298" id="bfM-sU-4hl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Guj-gG-vGR">
+                                <rect key="frame" x="38" y="548" width="298" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.67971181879999998" green="1" blue="0.14265921979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Guj-gG-vGR" firstAttribute="top" secondItem="l5t-LW-joI" secondAttribute="bottom" constant="51" id="382-hH-eaK"/>
+                            <constraint firstItem="scj-sq-dSu" firstAttribute="top" secondItem="gPJ-Qc-cY2" secondAttribute="top" constant="50" id="Cyq-dn-hUS"/>
+                            <constraint firstItem="gPJ-Qc-cY2" firstAttribute="trailing" secondItem="scj-sq-dSu" secondAttribute="trailing" constant="39" id="DxZ-ER-idV"/>
+                            <constraint firstItem="gPJ-Qc-cY2" firstAttribute="trailing" secondItem="Guj-gG-vGR" secondAttribute="trailing" constant="39" id="H34-TZ-g9Y"/>
+                            <constraint firstItem="scj-sq-dSu" firstAttribute="leading" secondItem="gPJ-Qc-cY2" secondAttribute="leading" constant="38" id="LP3-CJ-fV2"/>
+                            <constraint firstItem="Guj-gG-vGR" firstAttribute="leading" secondItem="gPJ-Qc-cY2" secondAttribute="leading" constant="38" id="lf3-lW-piH"/>
+                            <constraint firstItem="l5t-LW-joI" firstAttribute="leading" secondItem="gPJ-Qc-cY2" secondAttribute="leading" constant="38" id="lrz-Fw-utj"/>
+                            <constraint firstItem="l5t-LW-joI" firstAttribute="top" secondItem="scj-sq-dSu" secondAttribute="bottom" constant="43" id="o0q-bd-ahb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gPJ-Qc-cY2"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Homework" id="BIY-zY-FCf"/>
+                    <connections>
+                        <outlet property="homeworkDate" destination="Guj-gG-vGR" id="DJT-QC-6uF"/>
+                        <outlet property="homeworkDescription" destination="l5t-LW-joI" id="ysp-iy-n75"/>
+                        <outlet property="homeworkTittle" destination="scj-sq-dSu" id="A0G-WO-Reg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pmu-It-xMI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-746" y="-93"/>
+            <point key="canvasLocation" x="-746.39999999999998" y="689.5052473763119"/>
         </scene>
         <!--NIBM Students-->
         <scene sceneID="CLj-BB-CsV">
@@ -54,10 +166,10 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JDM-yE-27o">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.67971181879999998" green="1" blue="0.14265921979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.67971181879999998" green="1" blue="0.14265921979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JDM-yE-27o" firstAttribute="top" secondItem="0CZ-cs-0ZZ" secondAttribute="top" id="LUZ-kM-tSP"/>
                             <constraint firstItem="JDM-yE-27o" firstAttribute="leading" secondItem="DOG-HU-XRM" secondAttribute="leading" id="aKJ-5U-F7r"/>
@@ -388,11 +500,11 @@
             </objects>
             <point key="canvasLocation" x="446" y="-93"/>
         </scene>
-        <!--My Notes-->
+        <!--Homework-->
         <scene sceneID="YIY-pm-lgF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DzO-GZ-Ajq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Notes" image="note" id="3J7-RZ-bRv"/>
+                    <tabBarItem key="tabBarItem" title="Homework" image="note" id="3J7-RZ-bRv"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="moD-CW-zRs">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -405,7 +517,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3U3-hy-tWM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2257" y="-94"/>
+            <point key="canvasLocation" x="-2343" y="-94"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="0rh-UE-aCD">

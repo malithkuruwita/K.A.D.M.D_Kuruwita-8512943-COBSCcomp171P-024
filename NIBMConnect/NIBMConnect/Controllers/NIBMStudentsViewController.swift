@@ -18,13 +18,13 @@ class NIBMStudentsViewController: UIViewController, UITableViewDelegate, UITable
     var id :String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         studentTableView.dataSource = self
         studentTableView.delegate = self
         
-        let userNib = UINib(nibName: "StudentTableViewCell", bundle: nil)
-        studentTableView.register(userNib, forCellReuseIdentifier: "studentTableViewCell")
+        let studentNib = UINib(nibName: "StudentTableViewCell", bundle: nil)
+        studentTableView.register(studentNib, forCellReuseIdentifier: "studentTableViewCell")
         studentTableView.tableFooterView = UIView()
         
         //sepatrators go edge to edge

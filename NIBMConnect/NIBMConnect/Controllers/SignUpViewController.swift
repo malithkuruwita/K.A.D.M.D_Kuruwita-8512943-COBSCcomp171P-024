@@ -131,11 +131,9 @@ class SignUpViewController: UIViewController {
                     if url != nil{
                         //call userprofile save function
                         self.saveProfile(profileImageURL: url!){ success in
+                            
                             if success{
                                 //everything is succeded
-                                //remove spinner
-                                self.removeSpinner()
-                                
                                 //go to home window
                                 self.performSegue(withIdentifier: "signUpToHome", sender: nil)
                                 

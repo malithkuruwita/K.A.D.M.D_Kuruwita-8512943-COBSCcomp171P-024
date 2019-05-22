@@ -74,8 +74,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate, GIDSignInUIDe
             //show spinner
             self.showSpinner(onView: self.view)
             Auth.auth().signIn(withEmail: email.text!, password: password.text!) { (user, error) in
-                //hide spinner
-                self.removeSpinner()
+                
                 if error == nil{
                     //go to home window
                     self.performSegue(withIdentifier: "signInToHome", sender: nil)
