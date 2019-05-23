@@ -32,7 +32,6 @@ class SignUpViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         //make image view rounded
         imageView.layer.cornerRadius = imageView.frame.size.width / 2
         imageView.clipsToBounds = true
@@ -66,6 +65,18 @@ class SignUpViewController: UIViewController {
         
         //dismiss date picker
         datePicker?.addTarget(self, action: #selector(dismissDatePicker(datePicker:)), for: .valueChanged)
+        
+        //move viewup when editing
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    // Move view 150 points upward
+    @objc func keyboardWillShow(sender: NSNotification) {
+        self.view.frame.origin.y = -150
+    }
+    // Move view to original position
+    @objc func keyboardWillHide(sender: NSNotification) {
+        self.view.frame.origin.y = 0
     }
     
     //dismiss date picker function
@@ -209,6 +220,8 @@ class SignUpViewController: UIViewController {
             completion(error == nil)
         }
     }
+    
+    
     
 
 }

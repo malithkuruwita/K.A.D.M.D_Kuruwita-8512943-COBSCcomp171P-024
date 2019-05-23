@@ -31,6 +31,8 @@ class HomeworkAddViewController: UIViewController, UITextFieldDelegate, UITextVi
         }
         
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,6 +45,7 @@ class HomeworkAddViewController: UIViewController, UITextFieldDelegate, UITextVi
         homeworkDescription.resignFirstResponder()
         self.view.endEditing(true)
     }
+    
     
     //nav bar styles
     override func viewWillAppear(_ animated: Bool) {
