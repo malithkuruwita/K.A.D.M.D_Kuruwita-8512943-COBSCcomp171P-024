@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class CheckIdentityViewController: UIViewController {
 
@@ -30,18 +31,47 @@ class CheckIdentityViewController: UIViewController {
         nav?.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.green]
     }
     
-    @IBAction func check(_ sender: Any) {
-        self.performSegue(withIdentifier: "checkIdentityToMyProfile", sender: nil)
+    //check user tuchid function
+    @IBAction func touchIdAction(_ sender: Any) {
+        print("You have clicked the touch ID")
+        
+        let myContext = LAContext()
+        let myLocalizedReasonString = "Biometric Authntication testing !! "
+        
+        var authError: NSError?
+        if #available(iOS 8.0, macOS 10.12.1, *) {
+            if myContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
+                myContext.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: myLocalizedReasonString) { success, evaluateError in
+                    
+                    DispatchQueue.main.async {
+                        if success {
+                            // User authenticated successfully, take appropriate action
+                            print("Awesome!!... User authenticated successfully")
+                            self.performSegue(withIdentifier: "checkIdentityToMyProfile", sender: nil)
+                        } else {
+                            // User did not authenticate successfully, look at error and take appropriate action
+                            print("Sorry!!... User did not authenticate successfully")
+                        }
+                    }
+                }
+            } else {
+                // Could not evaluate policy; look at authError and present an appropriate message to user
+                print("Sorry!!.. Could not evaluate policy.")
+            }
+        } else {
+            // Fallback on earlier versions
+            print("Ooops!!.. This feature is not supported.")
+        }
+        
+        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
+    
+    
+    
+
+
+
+

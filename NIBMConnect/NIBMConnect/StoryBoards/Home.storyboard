@@ -337,17 +337,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snx-7N-vZ2">
-                                <rect key="frame" x="158" y="316" width="58" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fingerprint" translatesAutoresizingMaskIntoConstraints="NO" id="7WL-Qa-lFt">
+                                <rect key="frame" x="16" y="93" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="npN-uL-YvL"/>
+                                    <constraint firstAttribute="height" constant="343" id="pPd-A4-DgB"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="snx-7N-vZ2">
+                                <rect key="frame" x="78" y="510" width="218" height="35"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="Check"/>
+                                <state key="normal" title="Click To Enrolle TouchID"/>
                                 <connections>
-                                    <action selector="check:" destination="3tF-6l-TDo" eventType="touchUpInside" id="d2K-Zg-ehp"/>
+                                    <action selector="touchIdAction:" destination="3tF-6l-TDo" eventType="touchUpInside" id="0gL-3C-Clx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.67971181879999998" green="1" blue="0.14265921979999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="snx-7N-vZ2" firstAttribute="leading" secondItem="V0d-ul-ieg" secondAttribute="leading" constant="78" id="Du1-y2-mLz"/>
+                            <constraint firstItem="7WL-Qa-lFt" firstAttribute="leading" secondItem="V0d-ul-ieg" secondAttribute="leading" constant="16" id="Eao-Bv-zsx"/>
+                            <constraint firstItem="V0d-ul-ieg" firstAttribute="trailing" secondItem="snx-7N-vZ2" secondAttribute="trailing" constant="79" id="a2d-xH-V3G"/>
+                            <constraint firstItem="V0d-ul-ieg" firstAttribute="trailing" secondItem="7WL-Qa-lFt" secondAttribute="trailing" constant="16" id="gBu-lX-Z8U"/>
+                            <constraint firstItem="7WL-Qa-lFt" firstAttribute="top" secondItem="V0d-ul-ieg" secondAttribute="top" constant="29" id="hPw-C4-E78"/>
+                            <constraint firstItem="snx-7N-vZ2" firstAttribute="top" secondItem="7WL-Qa-lFt" secondAttribute="bottom" constant="74" id="qkk-QV-5Ra"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="V0d-ul-ieg"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ckeck Identity" id="B6o-bt-oTN"/>
@@ -357,7 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="joq-XY-8fg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="686" y="-851"/>
+            <point key="canvasLocation" x="685.60000000000002" y="-851.42428785607206"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="B8B-HF-T0n">
@@ -541,6 +555,7 @@
     </scenes>
     <resources>
         <image name="dummy_profile_pic" width="512" height="512"/>
+        <image name="fingerprint" width="1280" height="1280"/>
         <image name="home" width="25" height="25"/>
         <image name="note" width="25" height="25"/>
         <image name="profile" width="25" height="25"/>
