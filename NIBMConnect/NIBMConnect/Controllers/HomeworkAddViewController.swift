@@ -13,6 +13,10 @@ class HomeworkAddViewController: UIViewController, UITextFieldDelegate, UITextVi
    
     @IBOutlet weak var homeworkTitle: UITextField!
     @IBOutlet weak var homeworkDescription: UITextView!
+    
+    
+    @IBOutlet weak var addButton: CustomButton!
+    
     //get user default instence
     let userDefaults = UserDefaults.standard
     //homework class array instance
@@ -58,7 +62,8 @@ class HomeworkAddViewController: UIViewController, UITextFieldDelegate, UITextVi
     
    //add homework
     @IBAction func addHomework(_ sender: Any) {
-        
+        //button shake
+        addButton.shake()
         //validate textfields
         if homeworkTitle.text?.isEmpty ?? true || homeworkDescription.text?.isEmpty ?? true {
             let alertController = UIAlertController(title: "Error", message: "Empty fields are not allowed", preferredStyle: .alert)

@@ -18,6 +18,9 @@ class MyProfileViewController: UIViewController {
     @IBOutlet weak var birthdate: UILabel!
     @IBOutlet weak var phoneNumber: UILabel!
     
+    
+    @IBOutlet weak var signOutButton: CustomButton!
+    
     var myProfile = [MyProfile]()
     
     override func viewDidLoad() {
@@ -42,6 +45,19 @@ class MyProfileViewController: UIViewController {
             let myPro = MyProfile(snap: snapshot)
             self.myProfile.append(myPro)
             let myprofile = self.myProfile[0]
+            //check data nil
+            if myprofile.name == ""{
+                myprofile.name = "Undefined"
+            }
+            if myprofile.age == ""{
+                myprofile.age = "Undefined"
+            }
+            if myprofile.birthdate == ""{
+                myprofile.birthdate = "Undefined"
+            }
+            if myprofile.phoneNumber == ""{
+                myprofile.phoneNumber = "Undefined"
+            }
             //add data to labels
                 self.name.text = myprofile.name
                 self.age.text = myprofile.age
@@ -75,14 +91,31 @@ class MyProfileViewController: UIViewController {
     
     //user signout function
     @IBAction func signOut(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
+        //shake button
+        signOutButton.shake()
+        // Declare Alert
+        let dialogMessage = UIAlertController(title: "Confirm", message: "Are you sure you want to SignOut ?", preferredStyle: .alert)
+        // Create OK button with action handler
+        let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+            print("Ok button click...")
+            //firebase signout function
+            do {
+                try Auth.auth().signOut()
+            }
+            catch let signOutError as NSError {
+                print ("Error signing out: %@", signOutError)
+            }
+            self.performSegue(withIdentifier: "myProfileToSignIn", sender: nil)
+        })
+        // Create Cancel button with action handlder
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) -> Void in
+            print("Cancel button click...")
         }
-        catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
-        
-        self.performSegue(withIdentifier: "myProfileToSignIn", sender: nil)
+        //Add OK and Cancel button to dialog message
+        dialogMessage.addAction(ok)
+        dialogMessage.addAction(cancel)
+        // Present dialog message to user
+        self.present(dialogMessage, animated: true, completion: nil)
     }
     
     /*

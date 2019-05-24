@@ -11,6 +11,9 @@ import LocalAuthentication
 
 class CheckIdentityViewController: UIViewController {
 
+    
+    @IBOutlet weak var clickToEnrolleButton: CustomButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +36,9 @@ class CheckIdentityViewController: UIViewController {
     
     //check user tuchid function
     @IBAction func touchIdAction(_ sender: Any) {
+        //button shake
+        clickToEnrolleButton.shake()
+        //check touchid
         print("You have clicked the touch ID")
         
         let myContext = LAContext()

@@ -16,6 +16,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate, GIDSignInUIDe
     @IBOutlet weak var password: UITextField!
     
     
+    @IBOutlet weak var signInButton: CustomButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,6 +64,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate, GIDSignInUIDe
     
     //signin function
     @IBAction func signIn(_ sender: Any) {
+        //button animation
+        signInButton.shake()
         //validate textfields
         if email.text?.isEmpty ?? true || password.text?.isEmpty ?? true {
             let alertController = UIAlertController(title: "Error", message: "Empty fields are not allowed", preferredStyle: .alert)

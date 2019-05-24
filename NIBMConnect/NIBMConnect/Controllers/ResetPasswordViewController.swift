@@ -13,6 +13,10 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBOutlet weak var passwordReset: UITextField!
+    
+    
+    @IBOutlet weak var sendEmailButton: CustomButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,6 +44,8 @@ class ResetPasswordViewController: UIViewController, UITextFieldDelegate {
     
     //send mail to email address
     @IBAction func sendResetMail(_ sender: Any) {
+        //button shake
+        sendEmailButton.shake()
         //validate
         if passwordReset.text?.isEmpty ?? true{
             let alertController = UIAlertController(title: "Error", message: "email field is required", preferredStyle: .alert)

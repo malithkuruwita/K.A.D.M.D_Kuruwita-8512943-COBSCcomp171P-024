@@ -23,6 +23,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var birthdate: UITextField!
     
+    
+    @IBOutlet weak var signUpButton: CustomButton!
+    
     var imagePicker:UIImagePickerController!
     var datePicker:UIDatePicker?
     
@@ -109,6 +112,8 @@ class SignUpViewController: UIViewController {
     
     //signup function
     @IBAction func signUp(_ sender: Any) {
+        //signupbutton shake call
+        signUpButton.shake()
         //validations
         /*guard (self.name.text) != nil else { return }
         guard (self.age.text) != nil else { return }

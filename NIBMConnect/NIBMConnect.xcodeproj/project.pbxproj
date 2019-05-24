@@ -21,6 +21,7 @@
 		1B8C1C30229166E200A24F10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8C1C2E229166E200A24F10 /* LaunchScreen.storyboard */; };
 		1B8C1C3B229166E200A24F10 /* NIBMConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C3A229166E200A24F10 /* NIBMConnectTests.swift */; };
 		1B8C1C46229166E200A24F10 /* NIBMConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C45229166E200A24F10 /* NIBMConnectUITests.swift */; };
+		1B94A22E2297412000B4B5EA /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B94A22D2297412000B4B5EA /* CustomButton.swift */; };
 		1BA2A20D229366C80087F65F /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2A20C229366C80087F65F /* MyProfileViewController.swift */; };
 		1BA2A20F229376A60087F65F /* CheckIdentityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2A20E229376A60087F65F /* CheckIdentityViewController.swift */; };
 		1BA2A2112293790B0087F65F /* NIBMStudentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA2A2102293790B0087F65F /* NIBMStudentsViewController.swift */; };
@@ -84,6 +85,7 @@
 		1B8C1C41229166E200A24F10 /* NIBMConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NIBMConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8C1C45229166E200A24F10 /* NIBMConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMConnectUITests.swift; sourceTree = "<group>"; };
 		1B8C1C47229166E200A24F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B94A22D2297412000B4B5EA /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		1BA2A20C229366C80087F65F /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		1BA2A20E229376A60087F65F /* CheckIdentityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckIdentityViewController.swift; sourceTree = "<group>"; };
 		1BA2A2102293790B0087F65F /* NIBMStudentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIBMStudentsViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,14 @@
 			path = NIBMConnectUITests;
 			sourceTree = "<group>";
 		};
+		1B94A22C229740E700B4B5EA /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				1B94A22D2297412000B4B5EA /* CustomButton.swift */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
 		1BA61ED72291CC04002AA524 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +269,7 @@
 		1BAA0872229173A700E4F731 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1B94A22C229740E700B4B5EA /* CustomClasses */,
 				1BC96715229484F30020C1F6 /* TableViewCells */,
 				1BBFA8C02294044B00F9063D /* Services */,
 				1BA61ED72291CC04002AA524 /* Extensions */,
@@ -564,6 +575,7 @@
 				1BCD8F9D2292A3A700199026 /* AlertExtension.swift in Sources */,
 				1BA61ED02291C162002AA524 /* MainViewController.swift in Sources */,
 				1B05C880229589E900433A83 /* HomeworkAddViewController.swift in Sources */,
+				1B94A22E2297412000B4B5EA /* CustomButton.swift in Sources */,
 				1BC96718229485730020C1F6 /* StudentTableViewCell.swift in Sources */,
 				1BA2A2112293790B0087F65F /* NIBMStudentsViewController.swift in Sources */,
 				1BA61ED42291C1AA002AA524 /* SignUpViewController.swift in Sources */,
