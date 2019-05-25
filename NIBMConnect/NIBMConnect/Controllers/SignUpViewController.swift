@@ -203,6 +203,7 @@ class SignUpViewController: UIViewController {
                     }
                 })
             }else{
+                self.removeSpinner()
                 completion(nil)
             }
         }
@@ -222,6 +223,9 @@ class SignUpViewController: UIViewController {
             "phoneNumber": self.phoneNumber.text as Any
             ] as [String:Any]
         databaseRef.setValue(userObject){ error, ref in
+            if error != nil {
+                self.removeSpinner()
+            }
             completion(error == nil)
         }
     }

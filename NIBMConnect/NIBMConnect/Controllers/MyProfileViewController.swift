@@ -101,8 +101,7 @@ class MyProfileViewController: UIViewController {
             //firebase signout function
             do {
                 try Auth.auth().signOut()
-            }
-            catch let signOutError as NSError {
+            }catch let signOutError as NSError {
                 print ("Error signing out: %@", signOutError)
             }
             self.performSegue(withIdentifier: "myProfileToSignIn", sender: nil)

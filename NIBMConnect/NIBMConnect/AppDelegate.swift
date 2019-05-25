@@ -12,7 +12,7 @@ import Firebase
 import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate{
 
     var window: UIWindow?
     
@@ -25,37 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         UITabBar.appearance().barTintColor = UIColor.black
         UITabBar.appearance().tintColor = UIColor.green
         
-        //google
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
         return true
     }
     
     
-    //google
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let err = error{
-            print("Failed to log into Google: ", err)
-            return
-        }
-        print("Successfully logged into Google", user)
-        guard let idToken = user.authentication.idToken else {return}
-        guard let accessToken = user.authentication.accessToken else {return}
-        let credentials = GoogleAuthProvider.credential(withIDToken: idToken, accessToken: accessToken)
-        Auth.auth().signInAndRetrieveData(with: credentials, completion: { (user, error) in
-            if let err = error{
-                print("Faild to create a firebase User with Google account: ", err)
-                return
-            }
-            guard let uid = user?.user.uid else {return}
-            print("Successfully logged into Firebase with Google", uid)
-            let storyboard = UIStoryboard(name: "Home", bundle: nil)
-            let initial = storyboard.instantiateInitialViewController()
-            UIApplication.shared.keyWindow?.rootViewController = initial
-            
-        })
-    }
-    
+        
     
     
     

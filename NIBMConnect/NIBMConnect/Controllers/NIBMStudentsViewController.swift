@@ -19,6 +19,7 @@ class NIBMStudentsViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Do any additional setup after loading the view.
         studentTableView.dataSource = self
         studentTableView.delegate = self
@@ -40,13 +41,13 @@ class NIBMStudentsViewController: UIViewController, UITableViewDelegate, UITable
         self.showSpinner(onView: self.view)
         databaseRef.child("nibmstudents").observe(.childAdded, with: {
             (snapshot) in
-            print("key \(snapshot.key)")
-            print("values\(snapshot.value as Any)")
+            //print("key \(snapshot.key)")
+            //print("values\(snapshot.value as Any)")
             if !snapshot.exists(){return}
             let nibmStudents = NibmStudents(snap: snapshot)
             self.nibmStudents.append(nibmStudents)
-            let myprofile = self.nibmStudents[0]
-            print("\(myprofile.firstName)")
+            //let myprofile = self.nibmStudents[0]
+            //print("\(myprofile.firstName)")
             
             
             self.studentTableView.reloadData()
