@@ -16,7 +16,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,24 +24,50 @@ class MainViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            if(user != nil){
-                self.performSegue(withIdentifier: "mainToHome", sender: nil)
-            }else{
-                self.performSegue(withIdentifier: "mainToSignIn", sender: nil)
+        //check internet
+        checkInternet()
+    }
+    
+    func showAlert(){
+        print("show alert ---------------------------------------------------")
+        DispatchQueue.main.async {
+            // Declare Alert
+            let dialogMessage = UIAlertController(title: "Internet", message: "No Internet Connection !", preferredStyle: .alert)
+            // Create OK button with action handler
+            let reload = UIAlertAction(title: "Reload", style: .default, handler: { (action) -> Void in
+                print("reload button click...")
+                self.checkInternet()
+            })
+            //Add OK and Cancel button to dialog message
+            dialogMessage.addAction(reload)
+            // Present dialog message to user
+            self.present(dialogMessage, animated: true, completion: nil)
+        }
+        
+    }
+    
+    //internet check and firebase authenticate
+    func checkInternet(){
+        Reachability.isInternetAvailable(webSiteToPing: nil) { (isInternetAvailable) in
+            guard isInternetAvailable else {
+                // Inform user about the internet connection
+                print("no internet connection -------------------------------------------")
+                self.showAlert()
+                return
+            }
+            
+            // Do some action if there is Internet
+            self.handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+                if(user != nil){
+                    self.performSegue(withIdentifier: "mainToHome", sender: nil)
+                }else{
+                    self.performSegue(withIdentifier: "mainToSignIn", sender: nil)
+                }
             }
         }
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

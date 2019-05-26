@@ -13,6 +13,7 @@
 		1B05C8842295926100433A83 /* Homework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05C8832295926100433A83 /* Homework.swift */; };
 		1B05C8872295C26F00433A83 /* HomeworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B05C8852295C26F00433A83 /* HomeworkTableViewCell.swift */; };
 		1B05C8882295C26F00433A83 /* HomeworkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B05C8862295C26F00433A83 /* HomeworkTableViewCell.xib */; };
+		1B1C1C812299E27A000DCDF0 /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1C1C802299E27A000DCDF0 /* Rechability.swift */; };
 		1B838D9322934673006C15D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B838D9222934673006C15D9 /* GoogleService-Info.plist */; };
 		1B8C1C23229166E000A24F10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8C1C22229166E000A24F10 /* AppDelegate.swift */; };
 		1B8C1C28229166E000A24F10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B8C1C26229166E000A24F10 /* Main.storyboard */; };
@@ -71,6 +72,7 @@
 		1B05C8832295926100433A83 /* Homework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homework.swift; sourceTree = "<group>"; };
 		1B05C8852295C26F00433A83 /* HomeworkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkTableViewCell.swift; sourceTree = "<group>"; };
 		1B05C8862295C26F00433A83 /* HomeworkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeworkTableViewCell.xib; sourceTree = "<group>"; };
+		1B1C1C802299E27A000DCDF0 /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
 		1B838D9222934673006C15D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1B8C1C1F229166E000A24F10 /* NIBMConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NIBMConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B8C1C22229166E000A24F10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 		1BBFA8C02294044B00F9063D /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1B1C1C802299E27A000DCDF0 /* Rechability.swift */,
 				1BBFA8C1229404AF00F9063D /* ImageService.swift */,
 			);
 			path = Services;
@@ -570,6 +573,7 @@
 				1BCD8F9B2292A37300199026 /* LoadingExtension.swift in Sources */,
 				1BC9671D2294AC140020C1F6 /* NIBMStudentsDetailsViewController.swift in Sources */,
 				1BA2A20F229376A60087F65F /* CheckIdentityViewController.swift in Sources */,
+				1B1C1C812299E27A000DCDF0 /* Rechability.swift in Sources */,
 				1BC9671B229495ED0020C1F6 /* NibmStudents.swift in Sources */,
 				1BBFA8C2229404AF00F9063D /* ImageService.swift in Sources */,
 				1BCD8F9D2292A3A700199026 /* AlertExtension.swift in Sources */,
